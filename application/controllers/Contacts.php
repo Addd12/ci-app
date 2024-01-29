@@ -83,6 +83,7 @@ class Contacts extends CI_Controller {
         $data['cities'] = $this->Cities_model->get_all();
 
         $data['pal'] = $this->Pals_model->get_by_id($id);
+        //var_dump($data); die;
  
         $this->load->view('header', $header);
         $this->load->view('contacts/edit', $data);

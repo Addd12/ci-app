@@ -20,7 +20,7 @@ class Authors extends CI_Controller {
         $this->pagination->initialize($config);
 
         $page = ($this->uri->segment(2)) ? $this->uri->segment(2) : 0;
-
+        //var_dump($this->uri->segment_array());
         $data["links"] = $this->pagination->create_links();
 
         $data['authors'] = $this->authors_model->get_authors($config["per_page"], $page);

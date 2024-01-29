@@ -26,7 +26,7 @@ class Cities extends CI_Controller {
         $data['cities'] = $this->Cities_model->get_all();
         
         $this->load->view('header', $header);
-        $this->load->view('contacts/create', $data);
+        $this->load->view('cities/create', $data);
         $this->load->view('footer');
     }
 
